@@ -1,5 +1,6 @@
 import React from "react";
 import {Component, Fragment} from "react"
+import UserBar from "./userbar.js"
 import css from '../css/header.scss'
 
 class Header extends Component{
