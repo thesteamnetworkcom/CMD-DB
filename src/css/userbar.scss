@@ -1,13 +1,1 @@
 @import "globals";
-
-.user-bar{
-    width:100%;
-    height:$headerAndFooterHeight;
-    position:relative;
-    background-color:$colorBG;
-
-    &.inactive{
-        top:-50px;
-    }
-
-}
