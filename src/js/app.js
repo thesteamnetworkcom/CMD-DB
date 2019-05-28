@@ -285,9 +285,8 @@ class App extends Component{
           return;
       }
       let test = false;
-      let deleteKey = false;
-      let deleteInd = 0;
       let deleteKey = "";
+      let deleteInd = 0;
       for(var i = 0; i < this.state.deck.cards[key].length; i++){
           console.log(this.state.deck.cards[key][i].card.name);
           console.log(card.name);
