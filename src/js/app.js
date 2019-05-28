@@ -289,6 +289,9 @@ class App extends Component{
           console.log(this.state.deck.cards[key][i].card.name);
           console.log(card.name);
           if(this.state.deck.cards[key][i].card.name === card.name){
+              console.log(i);
+              console.log(this.state.deck.cards[key].splice(i,1));
+              console.log(key);
               this.state.deck.cards[key] = this.state.deck.cards[key].splice(i, 1);
               console.log(this.state.deck.cards[key]);
               test = true;
