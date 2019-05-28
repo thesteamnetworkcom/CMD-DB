@@ -33,10 +33,12 @@ class App extends Component{
     this.removeQuery = this.removeQuery.bind(this);
     this.addCard = this.addCard.bind(this);
     this.check = this.check.bind(this);
+    this.checkRem=this.checkRem.bind(this);
     this.updateQty = this.updateQty.bind(this);
     this.next = this.next.bind(this);
     this.prev = this.prev.bind(this);
     this.switchAbout = this.switchAbout.bind(this);
+    this.clear = this.clear.bind(this);
   }
   inputUpdate(e){
     if(event.key === "Backspace"){
@@ -379,7 +381,7 @@ class App extends Component{
           addCard={this.addCard}
           switchCardState={this.switchCardState}
           updateQty={this.updateQty}
-          clear={this.clearCardFromDeck}
+          clear={this.clear}
           prev={this.prev}
           next={this.next}
         />
