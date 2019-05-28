@@ -1,6 +1,6 @@
 import React from "react";
 import {Component, Fragment} from "react"
-import instructions from "../_content/instructions.json"
+//import instructions from "../_content/instructions.json"
 import css from "../css/instructions.scss"
 
 class Instructions extends Component{
