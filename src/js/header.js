@@ -25,6 +25,9 @@ class Header extends Component{
           <span className='byLine'>
             By: ScottieLew
           </span>
+          <span className='user-section'>
+            <i className="fas fa-user-ninja"></i>
+          </span>
           <span>
             <span>About: </span>
             <i className="fas fa-caret-square-down" onClick={this.props.switchAbout}></i>
