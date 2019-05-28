@@ -15,6 +15,7 @@ class DeckDisp extends Component{
           <h2>Deck {this.props.deck !== null ? "- " + this.props.deck.name + (this.props.deck.format !== null ? "- " + this.props.deck.format : "") : ""}</h2>
           <ul className='deck-list'>
             {this.props.deck !== null ? Object.keys(this.props.deck.cards).map(cardType =>
+                <Fragment>
                 {console.log(this.props.deck.cards[cardType])}
                 {this.props.deck.cards[cardType] !== undefined ?
                     <Fragment>
@@ -24,6 +25,7 @@ class DeckDisp extends Component{
                         )}
                     </Fragment>
                 : null}
+                </Fragment>
             ) : null}
           </ul>
         </div>
