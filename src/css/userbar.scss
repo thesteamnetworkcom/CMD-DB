@@ -1,1 +1,12 @@
 @import "globals";
+
+.user-bar{
+    width:100%;
+    height:50px;
+    position:relative;
+
+    &.inactive{
+        top:-50px;
+    }
+
+}

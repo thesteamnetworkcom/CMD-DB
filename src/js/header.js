@@ -10,7 +10,7 @@ class Header extends Component{
   render(){
     return(
       <Fragment>
-        <div className='header'>
+        <div className={}'header ' + this.props.showLogin ? 'active' : 'inactive'})>
           <div>
             <span>
               Deck Builder -
@@ -26,7 +26,7 @@ class Header extends Component{
             By: ScottieLew
           </span>
           <span className='user-section'>
-            <i className="fas fa-user-ninja"></i>
+            <i className="fas fa-user-ninja" onClick={this.props.switchLogin}></i>
           </span>
           <span>
             <span>About: </span>

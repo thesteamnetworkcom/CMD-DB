@@ -29,7 +29,8 @@ class App extends Component{
       output:[],
       input:"",
       optionState:false,
-      loginDetails:{}
+      loginDetails:{},
+      showLogin:false
     };
     this.inputUpdate = this.inputUpdate.bind(this);
     this.removeQuery = this.removeQuery.bind(this);
@@ -41,6 +42,7 @@ class App extends Component{
     this.prev = this.prev.bind(this);
     this.switchAbout = this.switchAbout.bind(this);
     this.clear = this.clear.bind(this);
+    this.switchLogin = this.switchLogin.bind(this);
 
   }
   inputUpdate(e){
@@ -375,12 +377,25 @@ class App extends Component{
     this.state.optionState=!this.state.optionState;
     this.setState({});
   }
+  switchLogin(){
+      this.state.switchLogin=!this.state.switchLogin;
+      this.setState({});
+  }
   render(){
     return(
       <Fragment>
         {/*<div data-netlify-identity-menu></div>*/}
-        <UserBar loginDetails={this.state.loginDetails}/>
-        <Header switchAbout={this.switchAbout}/>
+        <UserBar
+            loginDetails={this.state.loginDetails}
+            showLogin={this.state.showLogin}
+            switchLogin={this.switchLogin}
+        />
+        <Header
+            switchAbout={this.switchAbout}
+            loginDetails={this.state.loginDetails}
+            showLogin={this.state.showLogin}
+            switchLogin={this.switchLogin}
+        />
         <AppBody
           optionState={this.state.optionState}
           inputString={this.state.inputString}

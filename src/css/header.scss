@@ -18,6 +18,10 @@
   border-color:$colorAccentLight;
   font-family:$fontCursive;
 
+  &.active{
+      top:50px;
+  }
+
   >div{
     justify-content:center;
     display:flex;
