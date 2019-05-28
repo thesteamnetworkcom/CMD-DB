@@ -291,7 +291,7 @@ class App extends Component{
           console.log(this.state.deck.cards[key][i].card.name);
           console.log(card.name);
           if(this.state.deck.cards[key][i].card.name === card.name){
-              deleteIndex = i;
+              deleteInd = i;
               deleteKey = key;
               console.log(i);
               test = true;
