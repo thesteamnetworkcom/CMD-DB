@@ -307,17 +307,17 @@ class App extends Component{
       console.log(clearTarget);
       let types=clearTarget.type_line.split(" ");
       if(types.includes("Creature")){
-          this.checkRem("Creatures", card);
+          this.checkRem("Creatures", clearTarget);
       }else if(types.includes("Instant") || types.includes("Sorcery")){
-          this.checkRem("Spells", card);
+          this.checkRem("Spells", clearTarget);
       }else if(types.includes("Enchantment")){
-          this.checkRem("Enchantments", card);
+          this.checkRem("Enchantments", clearTarget);
       }else if(types.includes("Artifact")){
-          this.checkRem("Artifacts", card);
+          this.checkRem("Artifacts", clearTarget);
       }else if(types.includes("Planeswalker")){
-          this.checkRem("Planeswalkers", card);
+          this.checkRem("Planeswalkers", clearTarget);
       }else if(types.includes("Land")){
-          this.checkRem("Lands", card);
+          this.checkRem("Lands", clearTarget);
       }
       this.setState({
         deck:this.state.deck
