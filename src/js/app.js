@@ -294,7 +294,7 @@ class App extends Component{
               console.log(this.state.deck.cards[key]);
               test = true;
               if(this.state.deck.cards[key].length === 0){
-                  delete this.state.deck.cards[key];
+                  //delete this.state.deck.cards[key];
               }
           }
       }
