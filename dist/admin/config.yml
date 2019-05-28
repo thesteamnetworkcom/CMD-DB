@@ -9,8 +9,9 @@ collections:
       label: "Content"
       folder: "_content/"
       create: true
-      slug: "{{contentTitle}}.json"
+      slug: "{{contentTitle}}"
       identifier_field: contentTitle
+      extension: "json"
       fields:
           - {label: "Title", name: "contentTitle", widget: "string"}
           - {label: "Content", name: "content", widget: "text"}
