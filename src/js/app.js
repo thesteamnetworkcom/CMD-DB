@@ -285,20 +285,24 @@ class App extends Component{
           return;
       }
       let test = false;
+      let deleteKey = false;
+      let deleteInd = 0;
+      let deleteKey = "";
       for(var i = 0; i < this.state.deck.cards[key].length; i++){
           console.log(this.state.deck.cards[key][i].card.name);
           console.log(card.name);
           if(this.state.deck.cards[key][i].card.name === card.name){
-              console.log(this.state.deck.cards[key]);
-              var list = this.state.deck.cards[key].splice(i,1);
-              console.log(list);
-              this.state.deck.cards[key] = list;
-              console.log(this.state.deck.cards[key]);
+              deleteIndex = i;
+              deleteKey = key;
+              console.log(i);
               test = true;
-              if(this.state.deck.cards[key].length === 0){
-                  console.log(this.state.deck.cards[key]);
-                  this.state.deck.cards[key] = undefined;
-              }
+              break;
+          }
+      }
+      if(test){
+          this.state.deck.cards[deleteKey].splice(deleteInd, 1);
+          if(this.state.deck.cards[deleteKey].length === 0){
+              this.state.deck.cards[deleteKey] = undefined;
           }
       }
   }
