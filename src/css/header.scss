@@ -9,6 +9,7 @@
   padding-left:10px;
   padding-right:10px;
   display:flex;
+  flex-direction:column;
   align-items:center;
 
   height:$headerAndFooterHeight;
@@ -21,20 +22,22 @@
   &.inactive{
       top:-50px;
   }
+   >.helper-wrapper{
+       .display:flex;
+       >div{
+           justify-content:center;
+           display:flex;
+           align-items:center;
+       }
 
-  >div{
-    justify-content:center;
-    display:flex;
-    align-items:center;
-  }
+       >i{
+           flex:1;
+           text-align:right;
+       }
 
-  >i{
-    flex:1;
-    text-align:right;
-  }
-
-  >span{
-    flex:1;
-    text-align:right;
-  }
+       >span{
+           flex:1;
+           text-align:right;
+       }
+   }
 }
