@@ -14,11 +14,13 @@ class Card extends Component{
       return qty;
     }
     for(var key in this.props.deck.cards){
+     if(this.props.deck.cards[key] !== undefined){
       for(var i = 0; i < this.props.deck.cards[key].length; i++){
-        if(this.props.deck.cards[key][i].card.id === this.props.data.id){
-          qty = this.props.deck.cards[key][i].qty;
-        }
+       if(this.props.deck.cards[key][i].card.id === this.props.data.id){
+        qty = this.props.deck.cards[key][i].qty;
+       }
       }
+     }
     }
     return qty;
   }
