@@ -9,4 +9,6 @@ collections:
         label: "Deck"
         folder: "_content/decks"
         create: true
-        widget: "text"
+        fields:
+            -   {label "Deck", name: "deck", widget: "text"}
+    
