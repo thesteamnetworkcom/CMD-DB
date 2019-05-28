@@ -5,11 +5,12 @@ publish_mode: editorial_workflow
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 collections:
-    -   name: "deck"
-        label: "Deck"
-        folder: "_content/"
-        create: true
-        slug: "{{contentTitle}}.json"
-        fields:
-            -   {label: "Title", name: "contentTitle", widget: "string"}
-            -   {label: "Content", name: "content", widget: "text"}
+    - name: "content"
+      label: "Content"
+      folder: "_content/"
+      create: true
+      slug: "{{contentTitle}}.json"
+      identifier_field: contentTitle
+      fields:
+          - {label: "Title", name: "contentTitle", widget: "string"}
+          - {label: "Content", name: "content", widget: "text"}
