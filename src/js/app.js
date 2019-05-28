@@ -384,11 +384,6 @@ class App extends Component{
     return(
       <Fragment>
         {/*<div data-netlify-identity-menu></div>*/}
-        <UserBar
-            loginDetails={this.state.loginDetails}
-            showLogin={this.state.showLogin}
-            switchLogin={this.switchLogin}
-        />
         <Header
             switchAbout={this.switchAbout}
             loginDetails={this.state.loginDetails}

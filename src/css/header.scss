@@ -18,8 +18,8 @@
   border-color:$colorAccentLight;
   font-family:$fontCursive;
 
-  &.active{
-      top:50px;
+  &.inactive{
+      top:-50px;
   }
 
   >div{
