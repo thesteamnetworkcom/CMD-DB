@@ -43,7 +43,6 @@ class App extends Component{
     this.switchAbout = this.switchAbout.bind(this);
     this.clear = this.clear.bind(this);
     this.switchLogin = this.switchLogin.bind(this);
-
   }
   inputUpdate(e){
     if(event.key === "Backspace"){
