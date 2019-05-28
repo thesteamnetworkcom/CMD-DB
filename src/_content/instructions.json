@@ -12,5 +12,5 @@
               <pre>    [format]: a default format modifier for the new deck. places a base level query of 'f:[format]' on the card list.</pre>
               <pre>full deck example: 'deck format=modern name=test.dec action=new'</pre>
               <pre>Currently the only way to add cards is clicking on them annnddd they can't be decremented, I'm getting there</pre>
-              </div>""
+              </div>"
 }
