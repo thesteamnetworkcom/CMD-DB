@@ -11,8 +11,8 @@ class Header extends Component{
   render(){
     return(
       <Fragment>
-        <UserBar loginDetails={this.props.loginDetails} showLogin={this.props.showLogin} switchLogin={this.props.switchLogin} />
         <div className={'header ' + (this.props.showLogin ? 'active' : 'inactive')}>
+          <UserBar loginDetails={this.props.loginDetails} showLogin={this.props.showLogin} switchLogin={this.props.switchLogin} />
           <div>
             <span>
               Deck Builder -
