@@ -1,0 +1,36 @@
+@import "globals";
+
+.header{
+  width:100%;
+  border-bottom-style:solid;
+  border-width:thin;
+  font-size:25px;
+  font-weight:700;
+  padding-left:10px;
+  padding-right:10px;
+  display:flex;
+  align-items:center;
+
+  height:$headerAndFooterHeight;
+  color:$colorAccentLight;
+  background-color:$colorBG;
+  box-shadow:$boxShadowMed;
+  border-color:$colorAccentLight;
+  font-family:$fontCursive;
+
+  >div{
+    justify-content:center;
+    display:flex;
+    align-items:center;
+  }
+
+  >i{
+    flex:1;
+    text-align:right;
+  }
+
+  >span{
+    flex:1;
+    text-align:right;
+  }
+}

@@ -1,0 +1,71 @@
+@import "globals";
+
+.card{
+  width:180px;
+  height:252px;
+  margin:5px;
+  box-shadow:$boxShadowMed;
+  border-radius:10px;
+  background-color:rgba(0,0,0,0);
+
+  >img{
+    width:100%;
+    height:100%;
+  }
+  >.overlayQty{
+    position:absolute;
+    top:0px;
+    left:0px;
+    height:100%;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:160px;
+    color:rgba(250,250,250,.4);
+  }
+  >.overlayChangers{
+    position:absolute;
+    top:0px;
+    left:0px;
+    height:100%;
+    width:100%;
+    display:flex;
+
+    >div{
+      flex:1;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:40px;
+      color:rgba(250,250,250,.4);
+
+      &:hover{
+        background-color:rgba(140,140,140,.4);
+      }
+    }
+  }
+  >.overlayDisplay{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    width:50px;
+    height:50px;
+    border-radius:50px;
+
+    >i{
+      position:relative;
+      top:50%;
+      left:50%;
+      transform:translate(-50%, -50%);
+      font-size:24px;
+      color:rgba(250,250,250,.4);
+    }
+    &:hover{
+      background-color:rgba(140,140,140,.4);
+      border-style:solid;
+      color:rgba(250,250,250,.6);
+    }
+  }
+}

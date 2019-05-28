@@ -1,0 +1,30 @@
+@import "globals";
+
+.LeftPane{
+  padding:5px;
+  display:flex;
+  height:100%;
+
+  color:$colorDark;
+  font-family:$fontMain;
+
+  .card-wrapper{
+    overflow-y:auto;
+    flex-wrap:wrap;
+    width:100%;
+    padding:5px;
+
+    .cards{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:center;
+    }
+  }
+}
+.LeftPane.xPane{
+  flex:2;
+}
+.LeftPane.yPane{
+  flex:0;
+}

@@ -1,0 +1,9 @@
+@import "globals";
+
+.query-wrapper{
+  padding:5px;
+  >h2{
+    padding:3px;
+    background-color:$colorLight;
+  }
+}

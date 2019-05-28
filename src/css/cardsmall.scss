@@ -1,0 +1,26 @@
+@import "globals";
+
+.cardSmall{
+  background-color:$colorAccentLight;
+  box-shadow:$boxShadowSmall;
+  display:flex;
+
+  >.name{
+    flex:1;
+    padding:5px;
+  }
+  >.clear{
+    display:flex;
+    justify-content:right;
+    align-items:center;
+    padding:5px;
+    background-color:$colorAccentDark;
+  }
+  >.qty{
+    padding:5px;
+  }
+  >input{
+    flex:0;
+    min-width:35px;
+  }
+}

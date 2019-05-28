@@ -1,0 +1,10 @@
+@import "globals";
+
+.vertical-line{
+  margin-left:2px;
+  margin-right:2px;
+  width:2px;
+
+  background-color:$colorBG;
+  box-shadow:$boxShadowSmall;
+}

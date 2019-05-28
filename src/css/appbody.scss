@@ -1,0 +1,10 @@
+@import "globals";
+
+.body-wrapper{
+  width:100%;
+  display:flex;
+  flex:1;
+  align-items:center;
+  justify-content:space-between;
+  padding-top:5px;
+}

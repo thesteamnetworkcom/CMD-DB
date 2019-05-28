@@ -1,0 +1,42 @@
+@import "globals";
+
+.cmdprompt-wrapper{
+  height:100%;
+  width:100%;
+  min-width:200px;
+  max-height:800px;
+  background-color:$colorDark;
+  color:$colorLight;
+  padding:5px;
+  border-style:solid;
+  border-width:thin;
+  border-color:grey;
+  font-family:$fontMain;
+  font-weight:100;
+  font-size:12px;
+  overflow:hidden;
+  flex:1;
+
+  #cmdpromp-output{
+    word-break:keep-all;
+    word-wrap:normal;
+    white-space:pre-line;
+  }
+
+  #cmdprompt-input{
+    display:inline;
+    width:100%;
+    overflow:hidden;
+    word-break: keep-all;
+    word-wrap:normal;
+    white-space:pre-line;
+  }
+
+  #cmdprompt-cursor{
+    font-weight:bold;
+    display:inline;
+    position:relative;
+    left:-4px;
+  }
+
+}

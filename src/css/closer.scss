@@ -1,0 +1,18 @@
+@import "globals";
+
+.closer{
+  width:20px;
+  background-color:$colorAccentDark;
+  box-shadow:$boxShadowMed;
+  display:flex;
+  justify-content:center;
+  align-content:center;
+  flex-direction:column;
+
+  >i{
+    text-align:center;
+  }
+  >i.reverse{
+    transform:rotate(180deg);
+  }
+}

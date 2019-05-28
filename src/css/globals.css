@@ -1,0 +1,13 @@
+$fontMain: 'Kodchasan', sans-serif;
+$fontCursive: 'Ranga', cursive;
+
+$colorDark:#1b1725;
+$colorBG:#3a6ea5;
+$colorLight:#EFF2eF;
+$colorAccentDark:#f6ca83;
+$colorAccentLight:#abc8c0;
+
+$boxShadowMed:0px 0px 10px rgba(20,20,20,.4);
+$boxShadowSmall:0px 0px 4px rgba(20,20,20,.4);
+
+$headerAndFooterHeight:50px;

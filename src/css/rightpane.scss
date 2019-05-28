@@ -1,0 +1,20 @@
+@import "globals";
+
+.RightPane{
+  padding:5px;
+  display:flex;
+  height:100%;
+
+  color:$colorDark;
+  font-family:$fontMain;
+
+  >div{
+    flex:1;
+  }
+}
+.RightPane.xPane{
+  flex:2;
+}
+.RightPane.yPane{
+  flex:0;
+}
