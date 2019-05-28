@@ -378,7 +378,7 @@ class App extends Component{
     this.setState({});
   }
   switchLogin(){
-      this.state.switchLogin=!this.state.switchLogin;
+      this.state.showLogin=!this.state.showLogin;
       this.setState({});
   }
   render(){

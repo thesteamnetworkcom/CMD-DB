@@ -12,7 +12,6 @@ class UserBar extends Component{
             <Fragment>
                 <div className={'user-bar ' + this.props.showLogin ? 'active' : 'inactive'} >
                 </div>
-
             </Fragment>
         )
     }
