@@ -1,6 +1,7 @@
 @import "globals";
 
 .header{
+  z-index:10;
   width:100%;
 
   font-size:25px;
@@ -12,6 +13,7 @@
   height:$headerAndFooterHeight;
 
    >.user-bar{
+       z-index:10;
        width:100%;
        height:$headerAndFooterHeight;
        position:absolute;
@@ -26,6 +28,7 @@
        }
    }
    >.helper-wrapper{
+       z-index:1;
        font-size:25px;
        font-weight:700;
        padding-left:10px;
