@@ -10,9 +10,10 @@ class UserBar extends Component{
     render(){
         return(
             <Fragment>
-                
+
 
             </Fragment>
         )
     }
 }
+export default UserBar;

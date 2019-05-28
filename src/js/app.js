@@ -378,7 +378,7 @@ class App extends Component{
   render(){
     return(
       <Fragment>
-        <div data-netlify-identity-menu></div>
+        {/*<div data-netlify-identity-menu></div>*/}
         <UserBar loginDetails={this.state.loginDetails}/>
         <Header switchAbout={this.switchAbout}/>
         <AppBody
