@@ -26,7 +26,8 @@ class App extends Component{
       inputString:"!$> ",
       returnString:"%$> ",
       output:[],
-      input:""
+      input:"",
+      optionState:false
     };
     this.inputUpdate = this.inputUpdate.bind(this);
     this.removeQuery = this.removeQuery.bind(this);
@@ -35,6 +36,7 @@ class App extends Component{
     this.updateQty = this.updateQty.bind(this);
     this.next = this.next.bind(this);
     this.prev = this.prev.bind(this);
+    this.switchAbout = this.switchAbout.bind(this);
   }
   inputUpdate(e){
     if(event.key === "Backspace"){
@@ -312,11 +314,16 @@ class App extends Component{
       });
     }
   }
+  switchAbout(){
+    this.state.optionState=!this.state.optionState;
+    this.setState({});
+  }
   render(){
     return(
       <Fragment>
-        <Header />
+        <Header switchAbout={this.switchAbout}/>
         <AppBody
+          optionState={this.state.optionState}
           inputString={this.state.inputString}
           returnString={this.state.returnString}
           output={this.state.output}

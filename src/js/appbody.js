@@ -4,6 +4,7 @@ import css from "../css/appbody.scss"
 import LeftPane from "./leftpane.js"
 import CmdPrompt from "./cmdprompt.js"
 import RightPane from "./rightpane.js"
+import OptionPane from "./optionpane.js"
 
 class AppBody extends Component{
   constructor(props){
@@ -14,6 +15,7 @@ class AppBody extends Component{
     return(
       <Fragment>
         <div className='body-wrapper'>
+          {this.props.optionState === true ? <OptionPane /> : null}
           <LeftPane
             cardList={this.props.cardList}
             curList={this.props.curList}

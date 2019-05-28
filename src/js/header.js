@@ -27,7 +27,7 @@ class Header extends Component{
           </span>
           <span>
             <span>About: </span>
-            <i className="fas fa-caret-square-down"></i>
+            <i className="fas fa-caret-square-down" onClick={this.props.switchAbout}></i>
           </span>
         </div>
       </Fragment>
