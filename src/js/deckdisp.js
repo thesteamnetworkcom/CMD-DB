@@ -18,7 +18,7 @@ class DeckDisp extends Component{
               <Fragment>
                 <h3>{cardType}</h3>
                 {this.props.deck.cards[cardType].map(card=>
-                  <CardSmall key={card.id} data={card} updateQty={this.props.updateQty} />
+                  <CardSmall key={card.id} data={card} updateQty={this.props.updateQty} clear={this.props.clear}/>
                 )}
               </Fragment>
             ) : null}

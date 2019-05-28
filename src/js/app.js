@@ -265,6 +265,9 @@ class App extends Component{
     for(var i = 0; i < this.state.deck.cards[key].length; i++){
       if(this.state.deck.cards[key][i].card.name === card.name ){
         this.state.deck.cards[key][i].qty = this.state.deck.cards[key][i].qty + qty;
+        if(this.state.deck.cards[key][i].qty === 0){
+            this.clear(this.state.deck.cards[key][i]);
+        }
         test=true;
       }
     }
@@ -275,13 +278,48 @@ class App extends Component{
       });
     }
   }
+  checkRem(key, card){
+      if(this.state.deck.cards[key] === undefined){
+          return;
+      }
+      let test = false;
+      for(var i = 0; i < this.state.deck.cards[key].length; i++){
+          if(this.state.deck.cards[key][i].card.name === card.name){
+              this.state.deck.cards[key] = this.state.deck.cards[key].splice(i, 1);
+              test = true;
+          }
+      }
+  }
   updateQty(e, updateTarget){
     if((e.target.value)===''){
       updateTarget.qty='';
     }else{
       updateTarget.qty=parseInt(e.target.value);
+      if(updateTarget.qty === 0){
+          this.clear(updateTarget);
+      }
     }
     this.setState({});
+  }
+  clear(clearTarget){
+      console.log(clearTarget);
+      let types=card.type_line.split(" ");
+      if(types.includes("Creature")){
+          this.checkRem("Creatures", card);
+      }else if(types.includes("Instant") || types.includes("Sorcery")){
+          this.checkRem("Spells", card);
+      }else if(types.includes("Enchantment")){
+          this.checkRem("Enchantments", card);
+      }else if(types.includes("Artifact")){
+          this.checkRem("Artifacts", card);
+      }else if(types.includes("Planeswalker")){
+          this.checkRem("Planeswalkers", card);
+      }else if(types.includes("Land")){
+          this.checkRem("Lands", card);
+      }
+      this.setState({
+        deck:this.state.deck
+      });
   }
   next(){
     console.log(this.state.cardList.length -1);
@@ -341,6 +379,7 @@ class App extends Component{
           addCard={this.addCard}
           switchCardState={this.switchCardState}
           updateQty={this.updateQty}
+          clear={this.clearCardFromDeck}
           prev={this.prev}
           next={this.next}
         />

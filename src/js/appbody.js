@@ -40,6 +40,7 @@ class AppBody extends Component{
             removeQuery={this.props.removeQuery}
             deck={this.props.deck}
             updateQty={this.props.updateQty}
+            clear={this.props.clear}
           />
         </div>
       </Fragment>

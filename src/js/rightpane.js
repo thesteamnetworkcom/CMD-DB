@@ -34,6 +34,7 @@ class RightPane extends Component{
               <DeckDisp
                 deck={this.props.deck}
                 updateQty={this.props.updateQty}
+                clear={this.props.clear}
               />
             </React.Fragment>
           : null}

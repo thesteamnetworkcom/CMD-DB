@@ -17,7 +17,7 @@ class CardSmall extends Component{
             onChange={(e)=>this.props.updateQty(e, this.props.data)}
           />
           <span className='name'>{this.props.data.card.name}</span>
-          <div className='clear'>
+          <div className='clear' onClick={()=>this.props.clear(this.props.data.card)}>
             <i class="fas fa-backspace"></i>
           </div>
         </div>
