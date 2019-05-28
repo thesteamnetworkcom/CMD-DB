@@ -268,7 +268,7 @@ class App extends Component{
       if(this.state.deck.cards[key][i].card.name === card.name ){
         this.state.deck.cards[key][i].qty = this.state.deck.cards[key][i].qty + qty;
         if(this.state.deck.cards[key][i].qty === 0){
-            this.clear(this.state.deck.cards[key][i]);
+            this.clear(this.state.deck.cards[key][i].card);
         }
         test=true;
       }
@@ -311,7 +311,7 @@ class App extends Component{
     }else{
       updateTarget.qty=parseInt(e.target.value);
       if(updateTarget.qty === 0){
-          this.clear(updateTarget);
+          this.clear(updateTarget.card);
       }
     }
     this.setState({});
