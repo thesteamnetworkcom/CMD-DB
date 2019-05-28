@@ -290,10 +290,12 @@ class App extends Component{
           console.log(card.name);
           if(this.state.deck.cards[key][i].card.name === card.name){
               var list = this.state.deck.cards[key].splice(i,1);
+              console.log(list);
               this.state.deck.cards[key] = list;
               console.log(this.state.deck.cards[key]);
               test = true;
               if(this.state.deck.cards[key].length === 0){
+                  console.log(this.state.deck.cards[key]);
                   this.state.deck.cards[key] = undefined;
               }
           }
