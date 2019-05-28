@@ -305,7 +305,7 @@ class App extends Component{
   }
   clear(clearTarget){
       console.log(clearTarget);
-      let types=card.type_line.split(" ");
+      let types=clearTarget.type_line.split(" ");
       if(types.includes("Creature")){
           this.checkRem("Creatures", card);
       }else if(types.includes("Instant") || types.includes("Sorcery")){
