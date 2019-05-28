@@ -286,8 +286,11 @@ class App extends Component{
       }
       let test = false;
       for(var i = 0; i < this.state.deck.cards[key].length; i++){
+          console.log(this.state.deck.cards[key][i].card.name);
+          console.log(card.name);
           if(this.state.deck.cards[key][i].card.name === card.name){
               this.state.deck.cards[key] = this.state.deck.cards[key].splice(i, 1);
+              console.log(this.state.deck.cards[key]);
               test = true;
           }
       }
@@ -313,6 +316,7 @@ class App extends Component{
       }else if(types.includes("Enchantment")){
           this.checkRem("Enchantments", clearTarget);
       }else if(types.includes("Artifact")){
+          console.log("here");
           this.checkRem("Artifacts", clearTarget);
       }else if(types.includes("Planeswalker")){
           this.checkRem("Planeswalkers", clearTarget);
