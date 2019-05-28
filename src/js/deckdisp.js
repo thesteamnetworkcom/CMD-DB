@@ -6,7 +6,7 @@ import css from '../css/deckdisp.scss'
 class DeckDisp extends Component{
   constructor(props){
     super(props);
-    this.state={}
+    this.state={};
   }
   render(){
     return(

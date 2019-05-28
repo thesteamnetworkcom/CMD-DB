@@ -3,6 +3,7 @@ import {Component, Fragment} from "react"
 import Footer from "./footer.js"
 import AppBody from "./appbody.js"
 import Header from "./header.js"
+import UserBar from "./userbar.js"
 import parser from "./parser.js"
 import css from "../css/main.scss"
 import scryfallfetch from "./scryfallfetch.js"
@@ -27,7 +28,8 @@ class App extends Component{
       returnString:"%$> ",
       output:[],
       input:"",
-      optionState:false
+      optionState:false,
+      loginDetails:{}
     };
     this.inputUpdate = this.inputUpdate.bind(this);
     this.removeQuery = this.removeQuery.bind(this);
@@ -39,6 +41,7 @@ class App extends Component{
     this.prev = this.prev.bind(this);
     this.switchAbout = this.switchAbout.bind(this);
     this.clear = this.clear.bind(this);
+
   }
   inputUpdate(e){
     if(event.key === "Backspace"){
@@ -375,6 +378,8 @@ class App extends Component{
   render(){
     return(
       <Fragment>
+        <div data-netlify-identity-menu></div>
+        <UserBar loginDetails={this.state.loginDetails}/>
         <Header switchAbout={this.switchAbout}/>
         <AppBody
           optionState={this.state.optionState}
