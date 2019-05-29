@@ -14,4 +14,4 @@ collections:
       extension: "json"
       fields:
           - {label: "Title", name: "contentTitle", widget: "string"}
-          - {label: "Content", name: "content", widget: "text"}
+          - {label: "Content", name: "body", widget: "markdown"}

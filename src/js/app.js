@@ -29,7 +29,11 @@ class App extends Component{
       input:"",
       optionState:false,
       loginDetails:{},
-      showLogin:false
+      showLogin:false,
+      content:{
+        about:null,
+        instructions:null
+      }
     };
     this.inputUpdate = this.inputUpdate.bind(this);
     this.removeQuery = this.removeQuery.bind(this);
@@ -43,8 +47,12 @@ class App extends Component{
     this.clear = this.clear.bind(this);
     this.switchLogin = this.switchLogin.bind(this);
   }
+  componenetWillMount(){
+
+  }
   inputUpdate(e){
     if(event.key === "Backspace"){
+      event.preventDefault();
       this.setState({
         input:this.state.input.slice(0,-1)
       });
