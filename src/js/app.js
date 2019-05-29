@@ -47,9 +47,6 @@ class App extends Component{
     this.clear = this.clear.bind(this);
     this.switchLogin = this.switchLogin.bind(this);
   }
-  componenetWillMount(){
-
-  }
   inputUpdate(e){
     if(event.key === "Backspace"){
       event.preventDefault();
